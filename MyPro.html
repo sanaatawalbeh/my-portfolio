@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Amiri', Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .black-section {
+            background-color: rgb(34, 34, 34);
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            color: white;
+        }
+
+        .black-section .projects-intro {
+            font-size: 2em;
+            margin-top: 20px;
+            width: 100%;
+            font-family: 'Amiri', Arial, sans-serif;
+            font-weight: bolder;
+            margin-left: 20px;
+        }
+
+        .black-section .projects-description {
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Amiri', Arial, sans-serif;
+        }
+
+        .white-section {
+            background-color: rgb(248, 232, 232);
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 20px;
+            overflow-y: auto; /* Allow vertical scrolling if content overflows */
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgb(248, 248, 248);
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: auto;
+            font-family: 'Amiri', Arial, sans-serif;
+        }
+
+        .navbar ul li {
+            margin-right: 40px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #918e8e;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .projects-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Amiri', Arial, sans-serif;
+        }
+
+        .projects-list {
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Adjust spacing between cards */
+        }
+
+        .project-box {
+            background-color: rgb(34, 34, 34);
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+            width: calc(33.333% - 20px); /* Adjust width to fit 3 cards per row with margins */
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        .project-box img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
+        .project-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .project-box a {
+            color: #f06c64;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-box a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f06c64;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: 'Amiri', Arial, sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button i {
+            margin-left: 10px;
+        }
+
+        .back-button:hover {
+            background-color: #e05a54;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="black-section">
+            <div class="projects-intro">My Projects</div>
+            <div class="projects-description">Here you can find some of the projects I have worked on during my time at Orange.</div>
+        </div>
+        <div class="white-section">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="task10.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="MyPro.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="projects-title">Here are some of my projects:</div>
+            <div class="projects-list">
+                <div class="project-box">
+                    <img src="images/logoe2.jpg" >
+                    <h3>Store Website Project</h3>
+                    <p>
+                        A sleek e-commerce website designed for selling luxury accessories from top global brands like Gucci, Louis Vuitton, and Rolex. The site offers an elegant shopping experience with advanced filtering and a secure payment system.
+                        <a href="">View Details</a>
+                    </p>
+                </div>
+                <div class="project-box">
+                    <img src="">
+                    <h3>Quizify Website Project</h3>
+                    <p>
+                        Quizify is an interactive website designed to test and reinforce programming fundamentals across various languages such as Python, JavaScript, and Java. The platform offers a variety of quizzes that help users assess their knowledge and improve their coding skills.
+                        <a href="">View Details</a>
+                    </p>
+                </div>
+                <div class="project-box">
+                    <img src="" >
+                    <h3>Hospital Services Website</h3>
+                    <p>
+                        A comprehensive hospital website designed to offer a wide range of healthcare services. The site provides patients with easy access to appointment bookings, medical records, and information on various medical departments and specialists.
+                        <a href="">View Details</a>
+                    </p>
+                </div>
+                <!-- New project card for the bank -->
+                <div class="project-box">
+                    <img src="" >
+                    <h3>Bank Services Website</h3>
+                    <p>
+                        A modern banking website offering various services including account management, ATM locator, and customer support. The site features a user-friendly interface for managing banking needs and accessing important information.
+                        <a href="#">View Details</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

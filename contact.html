@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Amiri', Arial, sans-serif;
+            overflow-y: auto;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .black-section {
+            background-color: rgb(70, 65, 65);
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .white-section {
+            background-color: rgb(248, 232, 232);
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgb(248, 232, 232);
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            margin-left: auto;
+            font-family: 'Amiri', Arial, sans-serif;
+        }
+
+        .navbar ul li {
+            margin-right: 40px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #918e8e;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-header {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Amiri', Arial, sans-serif;
+        }
+
+        .social-icons-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .social-icons .icon-link {
+            font-size: 40px;
+            color: #333;
+        }
+
+        .social-icons .icon-link:hover {
+            color: #007BFF;
+        }
+
+        .contact-form-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        #confirmation-message {
+            display: none;
+            color: green;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="black-section">
+            <h1>Contact Me</h1>
+
+            <img src="images/p2.jpeg" alt="My photo" class="profile-photo">
+        </div>
+        <div class="white-section">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="task10.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="MyPro.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </nav>
+            <div class="contact-header">Get in Touch</div>
+            <p>Contact us directly through the following links:</p>
+            <div class="social-icons-box">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sanaa.tawalbeh.39?mibextid=qi2Omg" target="_blank" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/962785367250" target="_blank" class="icon-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/sanaa-tawalbeh-959911318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sanaatawalbeh" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sanaatawalbeh0@gmail.com" target="_blank" class="icon-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <p>Or write your inquiry or comment using the following form:</p>
+            <div class="contact-form-box">
+                <form id="contact-form" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div id="confirmation-message">
+                We will be in touch with you soon ^_^
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const confirmationMessage = document.getElementById('confirmation-message');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevents the default form submission
+
+                // Display the confirmation message
+                confirmationMessage.style.display = 'block';
+                <div id="confirmation-message" style="display: none; color: green; font-size: 1.2em; margin-top: 20px;">
+    We will be in touch with you soon ^_^
+</div>
+
+
+            });
+        });
+    </script>
+</body>
+</html>
