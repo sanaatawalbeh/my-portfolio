@@ -229,8 +229,8 @@ const handleContactScroll = (e) => {
                   transition: { duration: 0.25, ease: "easeOut" },
                 }}
                 whileTap={{ scale: 0.97 }}
-                href="/Sanaa-Tawalbeh-CV.pdf"
-                download="Sanaa-Tawalbeh-CV.pdf"
+                href="SanaaTawalbehCV.pdf"
+                download="SanaaTawalbehCV.pdf"
                 className="inline-flex items-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-purple-500 via-fuchsia-500 to-purple-700 px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-purple-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/40"
               >
                 <FiDownload className="w-3 h-3 sm:w-4 sm:h-4" />
