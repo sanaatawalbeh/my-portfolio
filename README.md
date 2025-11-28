@@ -1,4 +1,4 @@
-# my-portfolio# 🌐 Sana'a Tawalbeh – Portfolio
+🌐 Sana'a Tawalbeh – Portfolio
 
 A modern, responsive, and animated personal portfolio for **Sana'a Tawalbeh** – Full Stack Web Developer & Biomedical Engineering student.
 
