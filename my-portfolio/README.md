@@ -1,16 +1,46 @@
-# React + Vite
+# 🌐 Sana'a Tawalbeh – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animated personal portfolio for **Sana'a Tawalbeh** – Full Stack Web Developer & Biomedical Engineering student.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:**  
+👉 [https://sanaatawalbeh.github.io/my-portfolio/](https://sanaatawalbeh.github.io/my-portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio showcases my skills, education, certifications, projects, and contact information in a clean and interactive way.
 
-## Expanding the ESLint configuration
+The website is built with **React + Vite**, uses **Redux** for theme state, **Tailwind CSS** for styling, and **Framer Motion** for smooth animations.  
+It supports **light/dark mode**, **smooth scrolling between sections**, and includes a **contact form** for easy communication.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Main Features
+
+- 🎨 Modern responsive UI with Tailwind CSS
+- 🌗 Light / Dark theme toggle (stored in Redux)
+- 🎬 Smooth animations using Framer Motion
+- 📚 Sections:
+  - Hero / Home
+  - Education
+  - Certifications
+  - Skills
+  - Projects
+  - Contact
+- 🔗 External links to GitHub, LinkedIn, and email
+- 📄 CV download button
+- 📱 Fully responsive (desktop, tablet, mobile)
+- 🚀 Deployed on **GitHub Pages** using `gh-pages`
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, Vite
+- **State Management:** Redux Toolkit
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Routing:** React Router DOM (`HashRouter` for GitHub Pages)
+- **Icons:** React Icons
+- **Email / Contact:** EmailJS (`@emailjs/browser`)
