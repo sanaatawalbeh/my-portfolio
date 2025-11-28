@@ -1,12 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // نحاول نجيب الثيم من localStorage لو موجود
+const storedTheme =
+  typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+
 const initialTheme =
-  (typeof window !== "undefined" && localStorage.getItem("theme")) || "light";
+  storedTheme === "light" || storedTheme === "dark" ? storedTheme : "dark";
 
 const initialState = {
   mode: initialTheme, // "light" أو "dark"
 };
+
 
 const themeSlice = createSlice({
   name: "theme",

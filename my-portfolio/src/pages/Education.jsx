@@ -1,15 +1,7 @@
 // src/sections/EducationSection.jsx
 import React from "react";
 import { useSelector } from "react-redux";
-import {
-  FiCalendar,
-  FiMapPin,
-  FiAward,
-  FiBook,
-  FiCpu,
-  FiCode,
-  FiUsers,
-} from "react-icons/fi";
+import { FiCalendar, FiMapPin, FiAward, FiCpu } from "react-icons/fi";
 
 export default function EducationSection() {
   const mode = useSelector((state) => state.theme.mode);
@@ -22,13 +14,6 @@ export default function EducationSection() {
     "Web Development",
     "Computer Networks",
     "Operating Systems",
-  ];
-
-  const achievements = [
-    { number: "≈ 3.0 / 4.0", label: "Cumulative GPA (74%)", icon: FiAward },
-    { number: "167", label: "Credit Hours Completed", icon: FiBook },
-    { number: "10+", label: "Projects Completed", icon: FiCode },
-    { number: "5", label: "Years of Study", icon: FiUsers },
   ];
 
   return (
@@ -48,7 +33,7 @@ export default function EducationSection() {
               className={`w-8 sm:w-12 h-0.5 rounded-full ${
                 isDark ? "bg-purple-500" : "bg-purple-400"
               }`}
-            ></div>
+            />
             <span
               className={`text-xs sm:text-sm font-semibold uppercase tracking-wider ${
                 isDark ? "text-purple-300" : "text-purple-600"
@@ -60,7 +45,7 @@ export default function EducationSection() {
               className={`w-8 sm:w-12 h-0.5 rounded-full ${
                 isDark ? "bg-purple-500" : "bg-purple-400"
               }`}
-            ></div>
+            />
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -80,10 +65,9 @@ export default function EducationSection() {
           </p>
         </div>
 
-        {/* الكرت الرئيسي */}
-        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8">
-          {/* الكرت الأساسي */}
-          <div className="lg:flex-1">
+        {/* الكرت الرئيسي فقط */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-4xl">
             <div
               className={`relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 p-6 sm:p-8 shadow-xl sm:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${
                 isDark
@@ -205,50 +189,6 @@ export default function EducationSection() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Achievement Cards - جنب الكرت الكبير */}
-          <div className="lg:w-80 lg:flex-shrink-0">
-            <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-6">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className={`relative overflow-hidden rounded-xl sm:rounded-2xl border-2 p-4 sm:p-6 transition-all duration-500 hover:scale-105 ${
-                    isDark
-                      ? "border-purple-500/20 bg-slate-900/50 hover:bg-slate-800/50"
-                      : "border-purple-200 bg-white hover:bg-purple-50"
-                  }`}
-                >
-                  <div className="relative z-10">
-                    <div className="flex flex-col items-center text-center gap-3">
-                      <div
-                        className={`p-3 sm:p-4 rounded-lg sm:rounded-xl ${
-                          isDark ? "bg-purple-900/40" : "bg-purple-100"
-                        }`}
-                      >
-                        <achievement.icon
-                          className={`w-5 h-5 sm:w-6 sm:h-6 ${
-                            isDark ? "text-purple-400" : "text-purple-600"
-                          }`}
-                        />
-                      </div>
-                      <div>
-                        <div className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100">
-                          {achievement.number}
-                        </div>
-                        <div
-                          className={`text-xs sm:text-sm font-medium ${
-                            isDark ? "text-slate-400" : "text-slate-600"
-                          }`}
-                        >
-                          {achievement.label}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
