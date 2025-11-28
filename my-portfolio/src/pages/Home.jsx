@@ -82,6 +82,17 @@ const slideInRight = {
 export default function Home() {
   const mode = useSelector((state) => state.theme.mode);
   const isDark = mode === "dark";
+const handleContactScroll = (e) => {
+  e.preventDefault();
+
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    window.scrollTo({
+      top: contactSection.offsetTop - 80,
+      behavior: "smooth",
+    });
+  }
+};
 
   return (
     <motion.main
@@ -512,10 +523,11 @@ export default function Home() {
                   >
                     Ready to start your project?
                   </p>
-                  <motion.a
+                  <motion.button
+                    type="button"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="#contact"
+                    onClick={handleContactScroll}
                     className={`inline-flex items-center gap-1.5 sm:gap-2 rounded-full px-2.5 sm:px-3 py-1 text-xs font-semibold transition-all duration-300 ${
                       isDark
                         ? "bg-purple-600 text-white hover:bg-purple-700"
@@ -524,7 +536,7 @@ export default function Home() {
                   >
                     <FiMail className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                     Let&apos;s Talk
-                  </motion.a>
+                  </motion.button>
                 </motion.div>
               </div>
             </motion.div>

@@ -1,11 +1,13 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Home from "./pages/Home"; 
-// import Projects from "./components/Projects"; 
-// import Skills from "./components/Skills."; 
-// import Contact from "./components/Contact"; 
+import Home from "./pages/Home";
+import Education from "./pages/Education";
+import Certifications from "./pages/Certifications";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import "./App.css";
 
 function App() {
@@ -15,9 +17,11 @@ function App() {
         {/* Layout يحيط بكل الصفحات */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          {/* <Route path="projects" element={<Projects />} />
+          <Route path="education" element={<Education />} />
+          <Route path="certifications" element={<Certifications />} />
           <Route path="skills" element={<Skills />} />
-          <Route path="contact" element={<Contact />} /> */}
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
