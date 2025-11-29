@@ -1,7 +1,15 @@
 // src/sections/EducationSection.jsx
 import React from "react";
 import { useSelector } from "react-redux";
-import { FiCalendar, FiMapPin, FiAward, FiCpu } from "react-icons/fi";
+import {
+  FiCalendar,
+  FiMapPin,
+  FiAward,
+  FiCpu,
+  FiBook,
+  FiClock,
+  FiTrendingUp,
+} from "react-icons/fi";
 
 export default function EducationSection() {
   const mode = useSelector((state) => state.theme.mode);
@@ -16,6 +24,37 @@ export default function EducationSection() {
     "Operating Systems",
   ];
 
+  const academicStats = [
+    {
+      icon: FiAward,
+      label: "GPA",
+      value: "74%",
+      desc: "Good",
+      color: "text-emerald-400",
+    },
+    {
+      icon: FiBook,
+      label: "Credit Hours",
+      value: "+160",
+      desc: "Completed",
+      color: "text-blue-400",
+    },
+    {
+      icon: FiClock,
+      label: "Duration",
+      value: "5 Years",
+      desc: "2019 - 2024",
+      color: "text-purple-400",
+    },
+    {
+      icon: FiTrendingUp,
+      label: "Attendance",
+      value: "+90%",
+      desc: "Overall",
+      color: "text-amber-400",
+    },
+  ];
+
   return (
     <section
       id="education"
@@ -26,7 +65,7 @@ export default function EducationSection() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
-        {/* العنوان */}
+        {/* Header */}
         <div className="text-center space-y-4 sm:space-y-6">
           <div className="inline-flex items-center gap-2 sm:gap-3 mb-4">
             <div
@@ -65,9 +104,10 @@ export default function EducationSection() {
           </p>
         </div>
 
-        {/* الكرت الرئيسي فقط */}
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl">
+        {/* Main Content Layout */}
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          {/* Main Education Card */}
+          <div className="w-full lg:w-2/3">
             <div
               className={`relative overflow-hidden rounded-2xl sm:rounded-3xl border-2 p-6 sm:p-8 shadow-xl sm:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${
                 isDark
@@ -139,7 +179,7 @@ export default function EducationSection() {
                   <span className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-slate-800/50 dark:bg-slate-800/30">
                     <FiAward className="text-purple-500 w-4 h-4 sm:w-5 sm:h-5" />
                     <span className="font-medium whitespace-nowrap">
-                      Grade: <strong>Good (74%)</strong>
+                      GPA: <strong>Good (74%)</strong>
                     </span>
                   </span>
                 </div>
@@ -150,11 +190,11 @@ export default function EducationSection() {
                     isDark ? "text-slate-300" : "text-slate-600"
                   }`}
                 >
-                  Completed a comprehensive computer engineering program, with a
-                  5-year journey combining strong theoretical foundations and
-                  hands-on experience. Focused on modern web technologies,
-                  algorithms, and system design, with multiple real-world
-                  projects and teamwork.
+                  Completed a comprehensive computer engineering program over 4
+                  years, combining strong theoretical foundations with hands-on
+                  experience. Focused on modern web technologies, algorithms,
+                  and system design, with multiple real-world projects and
+                  teamwork experience.
                 </p>
 
                 {/* Key Courses */}
@@ -189,6 +229,55 @@ export default function EducationSection() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Stats Cards - Right side on desktop, below on mobile */}
+          <div className="w-full lg:w-1/3">
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-6">
+              {academicStats.map((stat, index) => (
+                <div
+                  key={index}
+                  className={`relative overflow-hidden rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:scale-105 ${
+                    isDark
+                      ? "bg-slate-900/50 border border-slate-700/50"
+                      : "bg-white border border-slate-200 shadow-sm"
+                  }`}
+                >
+                  <div className="relative z-10 space-y-2 sm:space-y-3 text-center">
+                    <div className="flex justify-center">
+                      <stat.icon
+                        className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color}`}
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <p
+                        className={`text-lg sm:text-2xl font-bold ${
+                          isDark ? "text-white" : "text-slate-900"
+                        }`}
+                      >
+                        {stat.value}
+                      </p>
+                      <p
+                        className={`text-xs sm:text-sm font-medium ${
+                          isDark ? "text-slate-400" : "text-slate-600"
+                        }`}
+                      >
+                        {stat.label}
+                      </p>
+                      <p
+                        className={`text-xs ${
+                          isDark ? "text-slate-500" : "text-slate-500"
+                        }`}
+                      >
+                        {stat.desc}
+                      </p>
+                    </div>
+                  </div>
+                  {/* Background effects */}
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-gradient-to-tr from-purple-500/10 to-transparent blur-xl" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
