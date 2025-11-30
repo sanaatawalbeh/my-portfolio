@@ -52,7 +52,7 @@ export default function ProjectsSection() {
         "AI-powered job tracking platform with automated recommendations, resume insights, and real-time Firestore syncing.",
       tech: ["React", "Firebase", "Redux", "Tailwind", "OpenAI API"],
       codeUrl: "https://github.com/sanaatawalbeh/Intellagent-Job-Tracker-2",
-      demoUrl: "https://github.com/sanaatawalbeh/Intellagent-Job-Tracker-2",
+      demoUrl: "https://sanaatawalbeh.github.io/Intellagent-Job-Tracker-2",
       status: "completed",
       category: "frontend",
       features: [
@@ -193,23 +193,23 @@ export default function ProjectsSection() {
       Redux: <SiRedux className="w-4 h-4 text-purple-500" />,
       Tailwind: <SiTailwindcss className="w-4 h-4 text-cyan-500" />,
       "OpenAI API": <SiOpenai className="w-4 h-4 text-green-500" />,
-      "REST API": <FiServer className="w-4 h-4 text-green-500" />,
-      JWT: <FiDatabase className="w-4 h-4 text-purple-500" />,
-      JavaScript: <FiCode className="w-4 h-4 text-yellow-400" />,
-      HTML5: <FiCode className="w-4 h-4 text-orange-500" />,
-      CSS3: <FiCode className="w-4 h-4 text-blue-500" />,
-      LocalStorage: <FiDatabase className="w-4 h-4 text-blue-400" />,
-      "Data Structures": <FiCode className="w-4 h-4 text-gray-500" />,
-      Algorithms: <FiCode className="w-4 h-4 text-purple-400" />,
-      "Problem Solving": <FiCode className="w-4 h-4 text-green-400" />,
-      EJS: <FiCode className="w-4 h-4 text-red-500" />,
+      "REST API": <FiServer className="w-4 h-4" />,
+      JWT: <FiDatabase className="w-4 h-4" />,
+      JavaScript: <FiCode className="w-4 h-4" />,
+      HTML5: <FiCode className="w-4 h-4" />,
+      CSS3: <FiCode className="w-4 h-4" />,
+      LocalStorage: <FiDatabase className="w-4 h-4" />,
+      "Data Structures": <FiCode className="w-4 h-4" />,
+      Algorithms: <FiCode className="w-4 h-4" />,
+      "Problem Solving": <FiCode className="w-4 h-4" />,
+      EJS: <FiCode className="w-4 h-4" />,
     };
     return icons[tech] || <FiCode className="w-4 h-4 text-gray-400" />;
   };
 
   const ProjectCard = ({ project }) => (
     <div
-      className={`relative overflow-hidden rounded-3xl border-2 transition-all duration-500 hover:scale-[1.02] group ${
+      className={`relative overflow-hidden rounded-3xl border-2 transition-all duration-500 hover:scale-[1.02] group h-full ${
         isDark
           ? "border-slate-700 bg-gradient-to-br from-slate-900/80 to-slate-800/80 hover:border-purple-500/50"
           : "border-slate-200 bg-gradient-to-br from-white to-slate-50/80 hover:border-purple-300"
@@ -220,7 +220,8 @@ export default function ProjectsSection() {
         className={`pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-gradient-to-tr ${project.color}/10 blur-2xl group-hover:${project.color}/20`}
       />
 
-      <div className="relative z-10 p-6">
+      {/* خلي المحتوى كله flex-col عشان الأزرار تنزّل تحت */}
+      <div className="relative z-10 p-6 flex flex-col h-full">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -325,8 +326,8 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex items-center gap-3">
+        {/* Action Buttons — mt-auto عشان تضل تحت */}
+        <div className="flex items-center gap-3 mt-auto">
           <a
             href={project.codeUrl}
             target="_blank"
