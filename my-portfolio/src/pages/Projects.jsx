@@ -179,6 +179,25 @@ export default function ProjectsSection() {
       icon: <FiCode className="w-6 h-6" />,
       color: "from-gray-500 to-slate-600",
     },
+    {
+      name: "Quizify – Programming Quiz Website",
+      slug: "Quizify",
+      description:
+        "Static quiz website where users enter their name, choose a course, and take multiple-choice quizzes for popular programming languages.",
+      tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
+      codeUrl: "https://github.com/sanaatawalbeh/Quizify",
+      demoUrl: "https://sanaatawalbeh.github.io/Quizify/",
+      status: "completed",
+      category: "frontend",
+      features: [
+        "Name-based welcome flow",
+        "Courses dashboard",
+        "Multiple language quizzes",
+        "LocalStorage username handling",
+      ],
+      icon: <FiCode className="w-6 h-6" />,
+      color: "from-amber-500 to-orange-600",
+    },
   ];
 
   const getTechIcon = (tech) => {
